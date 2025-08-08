@@ -1,29 +1,74 @@
-site_name: My site
-site_url: https://mydomain.org/mysite
+# Project information
+site_name: Jianyu's personal website
+site_url: https://jianyuzhao612.github.io/
+site_author: Jianyu Zhao
+
+# Repository
+repo_url: https://github.com/JianyuZhao612/jianyuzhao612.github.io/
+repo_name: JianyuZhao612/jianyuzhao612.github.io
+
+# Copyright
+copyright: copyright &copy; 2025 Jianyu Zhao
+
+# Configuration
 theme:
-  logo: assets/logo.png
   name: material
+  logo: assets/logo.png
+  custom_dir: overrides
   palette:
     # Dark Mode
     - scheme: slate
       toggle:
-        icon: material/weather-sunny
+        icon: material/toggle-switch
         name: Dark mode
-      primary: green
+      primary: amber
       accent: deep purple
 
     # Light Mode
     - scheme: default
       toggle:
-        icon: material/weather-night
+        icon: material/toggle-switch-off-outline
         name: Light mode
       primary: blue
       accent: deep orange
   features:
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
+    - navigation.tabs
+    - navigation.sections
     - navigation.footer
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  
 
+# Extensions
 markdown_extensions:
+  - abbr
+  - admonition
   - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+  - pymdownx.betterem:
+      smart_enable: all
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -31,12 +76,14 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
   - pymdownx.tabbed:
       alternate_style: true
-  - admonition
-  - pymdownx.details
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.superfences:
@@ -45,7 +92,73 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
-copyright: copyright &copy; 2025 Jianyu Zhao
+# Plugins
+plugins:
+  - blog:
+      blog_toc: true
+      post_url_format: "{slug}"
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+  # - mkdocs-jupyter:
+  #     execute: false
+  #     kernel_name: python3
+  #     include_requirejs: true
+  #     include_source: True
+  # - rss:
+  #   match_path: blog/posts/.*
+  #   pretty_print: false
+  #   rss_feed_enabled: true
+  #   # date_from_meta:
+  #   #   as_creation: date.created
+  #   #   as_update: date.updated
+  #   categories:
+  #     - categories
+  #   comments_path: "#__comments"
+
+# Additional configuration
 extra_javascript:
   - javascripts/mathjax.js
+  # - javascripts/3dmol-init.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.1.0/3Dmol-min.js
+extra_css:
+  - stylesheets/extra.css
+
+# Page tree
+nav:
+  - Home: readme.md
+
+  - Quantum Computing: 
+    - Introduction: quantum-computing/index.md
+    - Variational Quantum Eigensolver: quantum-computing/code-examples.md
+    - Quantum approximate optimization algorithm: quantum-computing/content-tabs.md
+
+  - Computational Chemistry:
+    - computational-chemistry/index.md
+    - HF-SCF:
+      - computational-chemistry/HF-SCF/code-examples.md
+      - computational-chemistry/HF-SCF/content-tabs.md
+      - Details:
+        - computational-chemistry/HF-SCF/code-examples.md
+        - computational-chemistry/HF-SCF/diagram-examples.md
+    - Machine learning:
+      - computational-chemistry/machine-learning/index.md
+      - SVM:
+        - Theoretical background: computational-chemistry/machine-learning/svm/svm.md
+        - 1.Extract features from smiles using RDKit: computational-chemistry/machine-learning/svm/active.md
+        
+    # - photochemistry:
+    #   - TD-DFT: computational-chemistry/photochemistry/code-examples.md
+    #   - Categories: computational-chemistry/photochemistry/content-tabs.md
+
+  - Scripts:
+    - Molecule visualization in 3D: scripts/mole_visual_demo.md
+    - Request SDF files in batch: scripts/request_file.md
+    - plot complexity figure: scripts/complexity_pic.md
+
+  - Blog:
+    - blog/index.md
+

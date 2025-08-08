@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+<!-- {% block content %}
+  {{ super() }}
+{% endblock %} -->
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+
+    // molecule container 02
+    let config = { backgroundColor: 'white' };
+    let element_02 = document.querySelector('#container_02');
+    let viewer2 = $3Dmol.createViewer(element_02, config);
+    let pdbUri = '../attachments/complex_qurecetin.pdb';
+    jQuery.ajax( pdbUri, { 
+      success: function(data) {
+        let v = viewer2;
+        v.addModel( data, "pdb" );                       /* load data */
+        v.setStyle({chain:'A'}, {cartoon: {color: 'spectrum'}});  /* style protein in cartoon style */
+        v.setStyle({ hetflag: true }, { stick: { radius: 0.25} });
+        v.addSurface($3Dmol.SurfaceType.VDW, { 
+        opacity: 0.7,      // opacity（0-1）
+        color: 'white',    // color of the surface
+        voldata: { chain: 'A' }  // only generate surface for chain A
+        });
+        v.zoomTo();                                      /* set camera */
+        v.render();                                      /* render scene */
+        v.zoom(1.2, 1000);                               /* slight zoom */
+      },
+      error: function(hdr, status, err) {
+        console.error( "Failed to load PDB " + pdbUri + ": " + err );
+      },
+    });
+  </script>
+{% endblock %}
+

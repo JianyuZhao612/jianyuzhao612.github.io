@@ -1,0 +1,13 @@
+*.ipynb_checkpoints
+*.DS_Store
+*.vs
+*.wsp
+out
+build
+site
+CMakeSettings.json
+*.out
+*.idea
+notes.txt
+
+
