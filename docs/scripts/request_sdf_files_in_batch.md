@@ -1,5 +1,6 @@
-This code download SDF files for thousands of molecules in batch when provided SMILES. 
+This code download SDF files of molecules in batch when provided SMILES files. 
 The code background is: Frontend colleagues need molecular files with geometry information stored in their database. They used JavaScript library [3Dmol.js](https://3dmol.org/doc/index.html ) to visualize 3D molecular structrues on web application when provided sdf or pdf format files. 
+Example SMILES txt file can be checked [here](https://github.com/JianyuZhao612/jianyuzhao612.github.io/blob/master/docs/scripts/attachments/SMILES.txt). All codes mentioned in `Scripts` section are placed in [this folder](https://github.com/JianyuZhao612/jianyuzhao612.github.io/tree/master/docs/scripts/codes).
 
 ```python
 import requests,os

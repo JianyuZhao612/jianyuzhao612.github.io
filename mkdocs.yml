@@ -8,7 +8,7 @@ repo_url: https://github.com/JianyuZhao612/jianyuzhao612.github.io/
 repo_name: JianyuZhao612/jianyuzhao612.github.io
 
 # Copyright
-copyright: copyright &copy; 2025 Jianyu Zhao
+copyright: copyright &copy; 2026 Jianyu Zhao
 
 # Configuration
 theme:
@@ -120,7 +120,6 @@ plugins:
 # Additional configuration
 extra_javascript:
   - javascripts/mathjax.js
-  # - javascripts/3dmol-init.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
   - https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.1.0/3Dmol-min.js
@@ -129,7 +128,7 @@ extra_css:
 
 # Page tree
 nav:
-  - Home: readme.md
+  - Home: index.md
 
   - Quantum Computing: 
     - Introduction: quantum-computing/index.md
@@ -155,9 +154,9 @@ nav:
     #   - Categories: computational-chemistry/photochemistry/content-tabs.md
 
   - Scripts:
-    - Molecule visualization in 3D: scripts/mole_visual_demo.md
-    - Request SDF files in batch: scripts/request_file.md
-    - plot complexity figure: scripts/complexity_pic.md
+    - Molecule visualization in 3D: scripts/molecule_visualization_in_3d.md
+    - Request SDF files in batch: scripts/request_sdf_files_in_batch.md
+    - Plot complexity figure: scripts/plot_complexity_figure.md
 
   - Blog:
     - blog/index.md
