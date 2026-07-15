@@ -1,0 +1,53 @@
+https://caliweb.vub.be/?page=course-offer&id=011306&anchor=1&target=pr&year=2526&language=en&output=html
+https://research.cbc.osu.edu/sokolov.8/wp-content/uploads/2023/05/programming_scf.pdf
+https://research.cbc.osu.edu/sokolov.8/resources/
+https://gitlab.com/dalton/dalton
+
+
+Patrick Bultinck-Computational chemistry : Best practices  
+
+-Linear algebraic techniques 
+
+-collaborative tools 
+
+-version control 
+
+-testing and code coverage 
+
+-continuous integration 
+
+- documentation 
+
+-build systems 
+
+-software design 
+
+Integrals  
+
+-overlap 
+
+-kinetic and dipole  
+
+-libint & PSI4 
+
+Self consistent field procedures 
+
+-RHF 
+
+-UHF 
+
+-ROHF 
+
+-DIIS 
+
+Correlated quantum chemical methods 
+
+Perturbation theory on Hartree-Fock 
+
+-MP2 
+
+Orbital optimization 
+
+Response properties 
+
+-CPHF  
