@@ -24,7 +24,7 @@ The chosen molecular descriptors(features) are generally classified into 5 class
 The specific descriptors are presented as follow (from paper[^2] in appendix B): 
 
 <div align=center>
-<img src="../image/descriptors.png" width="447px" height="719px" />
+<img src="../attachments/descriptors.png" width="447px" height="719px" />
 </div>
 
 

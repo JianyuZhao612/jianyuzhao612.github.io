@@ -131,7 +131,7 @@ nav:
   - Home: index.md
 
   - Quantum Computing: 
-    - Introduction: quantum-computing/index.md
+    - Introduction: quantum-computing/introduction.md
     - Variational Quantum Eigensolver: quantum-computing/code-examples.md
     - Quantum approximate optimization algorithm: quantum-computing/content-tabs.md
 

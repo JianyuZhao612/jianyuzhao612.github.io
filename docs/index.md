@@ -1,6 +1,12 @@
+<div>
+<img src="../assets/latte.jpg" style="float: right; margin-left: 10px; margin-bottom: 10px; width: 150px;">
+</div>
+
 This is Jianyu's personal website. In this website I put some notes and code about quantum chemistry and quantum computing I'm interested in. (I used to put it in my personal blog in Chinese, now I've translated and organized them on Github pages.) This website is still under construction, I will keep it up to date as much as I can. 
 
 My master study was about using computational chemistry method (DFT and MD) to describe and understand gelation behavior of bis-urea-based hydrogelators. After graduation, I joined in Origin Quantum company as a quantum algorithm developer, where my research interest is about optimization and application of variational quantum algorithms in solving real-world problems. 
+
+---
 
 In this website, I arranged my notes in four sections: 
 
@@ -12,6 +18,6 @@ In `Scripts` section, you’ll find a mix of experiments of molecule visualizati
 
 At last, I post some of my reflections in `Blog` section, which includes quantum computing, computational chemistry and language learning, etc. Welcome to leave comments to my posts! 
 
-FYI, this static site is built based on documentation framework  [Material for Docs](https://squidfunk.github.io/mkdocs-material/). A quick tutorial can be checked on [james-willett's blog](https://jameswillett.dev/getting-started-with-material-for-mkdocs/#introduction). 
+FYI, this static site is built based on documentation framework [Material for Docs](https://squidfunk.github.io/mkdocs-material/). A quick tutorial can be checked on [james-willett's blog](https://jameswillett.dev/getting-started-with-material-for-mkdocs/#introduction). 
 
 
